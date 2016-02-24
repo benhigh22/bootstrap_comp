@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+</head>
+<body>
+
+<ul class="nav nav-pills">
+  <li role="presentation"><a href="{% url "index" %}">Home</a></li>
+  <li role="presentation"><a href="{% url "aboutme" %}">About Me</a></li>
+  <li role="presentation" class="active"><a href="{% url "detailedinfo" %}">Detailed Info</a></li>
+</ul>
+
+<div class="page-header">
+  <h1>Top Players <small>2015 Fantasy Stats</small></h1>
+</div>
+
+{%for stat in stats %}
+    <div>Name: {{ stat }}</div>
+    <div>Position: {{ stat.position }}</div>
+    <div>2015 Total Points: {{ stat.points }}</div>
+    <br>
+{% endfor %}
+
+</body>
+</html>
