@@ -8,29 +8,30 @@
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
 </head>
 <body>
+<div class="container">
 
 <ul class="nav nav-pills">
   <li role="presentation"><a href="{% url "index" %}">Home</a></li>
-  <li role="presentation"><a href="{% url "aboutme" %}">About Me</a></li>
   <li role="presentation" class="active"><a href="{% url "detailedinfo" %}">2015 Player Info</a></li>
+  <li role="presentation"><a href="{% url "aboutme" %}">About The Founder</a></li>
 </ul>
-
+<div class="full_stats">
 <div class="page-header">
   <h1>Top Players <small>2015 Fantasy Football Stats</small></h1>
 </div>
-
-
 {%for stat in stats %}
-<div class="panel panel-default">
-  <div class="panel-heading"><div class="stat_style">Name: {{ stat }}</div></div>
-  <div class="panel-body">
-    <p><div class="stat_style">Position: {{ stat.position }}</div></p>
+<div class="panel panel-primary">
+  <div class="panel-heading"><div class="header_style">{{ stat }}</div></div>
   </div>
   <table class="table">
-    <div class="stat_style">Total Points: {{ stat.points }}</div>
+      <div class="stat_style">Position: {{ stat.position }}</div>
+    <div class="stat_style">Total Season Points: {{ stat.points }}</div>
+      <div class="stat_style">Weekly Avg Points: {{ stat.weekly_points }}</div>
   </table>
-</div>
+
 {% endfor %}
+</div>
+</div>
 
 </body>
 </html>

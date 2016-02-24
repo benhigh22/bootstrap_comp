@@ -10,11 +10,11 @@
 
 </head>
 <body>
-
+<div class="container">
 <ul class="nav nav-pills">
   <li role="presentation"><a href="{% url "index" %}">Home</a></li>
-  <li role="presentation" class="active"><a href="{% url "aboutme" %}">About Me</a></li>
   <li role="presentation"><a href="{% url "detailedinfo" %}">2015 Player Info</a></li>
+  <li role="presentation" class="active"><a href="{% url "aboutme" %}">About The Founder</a></li>
 </ul>
 
 <div class="jumbotron">
@@ -51,7 +51,7 @@
 </div>
 </div>
 
-
+</div>
 <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
 <script src="{% static 'js/bootstrap.js' %}" type="application/javascript"></script>
 

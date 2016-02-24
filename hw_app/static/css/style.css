@@ -3,10 +3,26 @@
     padding: 50px;
 }
 
-.stat_style{
-    padding-left: 70px;
+.header_style{
+    text-align: center;
+    font-size: x-large;
 }
 
-.panel {
-    width: 25%;
+.stat_style{
+    text-align: center;
+    font-size: x-large;
+}
+
+.panel-heading {
+    text-transform: uppercase;
+    font-size: x-large;
+}
+
+.container {
+    padding: 10px;
+    background-color: lightblue;
+}
+
+.page-header{
+    text-align: center;
 }
