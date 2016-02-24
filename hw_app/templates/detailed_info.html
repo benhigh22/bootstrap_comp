@@ -5,24 +5,31 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
 </head>
 <body>
 
 <ul class="nav nav-pills">
   <li role="presentation"><a href="{% url "index" %}">Home</a></li>
   <li role="presentation"><a href="{% url "aboutme" %}">About Me</a></li>
-  <li role="presentation" class="active"><a href="{% url "detailedinfo" %}">Detailed Info</a></li>
+  <li role="presentation" class="active"><a href="{% url "detailedinfo" %}">2015 Player Info</a></li>
 </ul>
 
 <div class="page-header">
-  <h1>Top Players <small>2015 Fantasy Stats</small></h1>
+  <h1>Top Players <small>2015 Fantasy Football Stats</small></h1>
 </div>
 
+
 {%for stat in stats %}
-    <div>Name: {{ stat }}</div>
-    <div>Position: {{ stat.position }}</div>
-    <div>2015 Total Points: {{ stat.points }}</div>
-    <br>
+<div class="panel panel-default">
+  <div class="panel-heading"><div class="stat_style">Name: {{ stat }}</div></div>
+  <div class="panel-body">
+    <p><div class="stat_style">Position: {{ stat.position }}</div></p>
+  </div>
+  <table class="table">
+    <div class="stat_style">Total Points: {{ stat.points }}</div>
+  </table>
+</div>
 {% endfor %}
 
 </body>

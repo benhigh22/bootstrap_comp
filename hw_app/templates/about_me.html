@@ -5,14 +5,55 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+
 </head>
 <body>
 
 <ul class="nav nav-pills">
   <li role="presentation"><a href="{% url "index" %}">Home</a></li>
   <li role="presentation" class="active"><a href="{% url "aboutme" %}">About Me</a></li>
-  <li role="presentation"><a href="{% url "detailedinfo" %}">Detailed Info</a></li>
+  <li role="presentation"><a href="{% url "detailedinfo" %}">2015 Player Info</a></li>
 </ul>
+
+<div class="jumbotron">
+  <h1>Benjamin High</h1>
+  <p>A scholar, gentleman, and philanthropist, Ben spends his time saving kittens from trees or babies from burning
+      buildings. He is a fantasy football enthusiast and made his billions by repeatedly destroying all of
+  his competition in every fantasy league he has ever competed in. For further information or just to let him know how
+      awesome he is, contact him via the below button.</p>
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Contact Info</button>
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Benjamin High</h4>
+      </div>
+      <div class="modal-body">
+        <address>
+        <strong>Ben's Fantasy Football Inc.</strong><br>
+        1234 Football Lane<br>
+        Canton, OH 44090<br>
+        <abbr title="Phone">P:</abbr> (123) 123-1234
+        </address>
+        <address>
+        <strong>Email:</strong><br>
+        <a href="mailto:#">bensff@fantasysports.com</a>
+        </address>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+<script src="{% static 'js/bootstrap.js' %}" type="application/javascript"></script>
 
 </body>
 </html>
