@@ -25,4 +25,9 @@
 
 .page-header{
     text-align: center;
+    color: darkblue;
+}
+
+.home_images{
+    padding-left: 30px;
 }
